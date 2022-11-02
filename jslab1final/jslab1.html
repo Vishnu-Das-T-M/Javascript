@@ -1,0 +1,60 @@
+<!--Create a simple calculator having functionalities of addition,subtraction,multiplication and division. 
+1.calculator should have 2 input field for first no. and second no. 
+2. dropdown to choose option (+,-,*,/) 
+3. when click a result button output should be displayed in an another text field based on selected option-->
+
+
+<!DOCTYPE html>
+<html en-us>
+<head>
+	<title>JS lab 1</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="jslab1.css">
+	<script type="text/javascript">
+		function arithematicOperations()
+		 	{
+				var operand1, operand2;
+				operand1=parseFloat(document.getElementById("num1").value);
+				operand2=parseFloat(document.getElementById("num2").value);
+				operator=document.getElementById("operator").value;
+				switch(operator)
+					{
+					case '+':
+					document.getElementById('result').value=operand1+operand2;
+					break;
+					case '-':
+					document.getElementById('result').value=operand1-operand2;
+					break;
+					case '*':
+					document.getElementById('result').value=operand1*operand2;
+					break;
+					case '/':
+					document.getElementById('result').value=operand1/operand2;
+					break;
+					}
+			}
+	</script>
+</head>
+<body>
+	<div>
+			<h2 align="center"> CALCULATOR</h2>	
+			<label>Enter the first number:</label>
+			<input type="text" name="num1" id="num1"><br><br>
+			<label>Select operator:</label>
+			<select id="operator">
+				<option value="+">+</option>
+				<option value="-">-</option>
+				<option value="*">*</option>
+				<option value="/">/</option>
+			</select><br><br>
+			<label>Enter the second number:</label>
+			<input type="text" name="num2" id="num2"><br><br>
+			<label>Output:</label>
+			<button onclick="arithematicOperations()">
+				Result
+			</button>
+			<input type="text" name="op" id="result">
+	</div>
+</body>
+</html>		
